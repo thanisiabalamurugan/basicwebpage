@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Now</title>
+    <style>
+        body {
+            background-color: #00b6b6;
+            text-align: center;
+        }
+        
+        h1 {
+            color: white;
+        }
+        
+        button {
+            background-color: white;
+            color: #00b6b6;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        
+        button:hover {
+            background-color: #00b6b6;
+            color: white;
+        }
+        
+        .image-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+        
+        .image-container img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            margin: 0 10px;
+        }
+        
+        .logo {
+            margin-top: 20px;
+        }
+        
+        .logo img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        
+        .name {
+            color: white;
+            margin-top: 10px;
+            font-size: 24px;
+        }
+        
+        .services {
+            color: white;
+            margin-top: 30px;
+            font-size: 20px;
+        }
+        
+        .services p {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <img src="data:image/png;base64,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" alt="Logo">
+    </div>
+    <div class="name">
+        Laundry Services
+    </div>
+    <h1>Welcome to our Booking Page</h1>
+    <a href="/book"><button>Book Now</button></a>
+    <div class="image-container">
+        <img src="https://washmart.in/assets/img/slider/8.jpg" alt="Image 1">
+        <img src="https://washmart.in/assets/img/slider/12.jpg" alt="Image 2">
+        <img src="https://washmart.in/assets/img/slider/1.jpg" alt="Image 3">
+        <img src="https://washmart.in/assets/img/slider/11.jpg" alt="Image 4">
+        <img src="https://washmart.in/assets/img/slider/7.jpg" alt="Image 5">
+    </div>
+    <div class="services">
+        <h2>About Our Laundry Pickup and Delivery Services</h2>
+        <p>We understand that your time is valuable, so we offer convenient laundry pickup and delivery services.</p>
+        <p>Here's how it works:</p>
+        <p>1. Schedule a pickup: Use our online booking system or give us a call to schedule a pickup at your desired time and location.</p>
+        <p>2. We collect your laundry: Our professional team will come to your doorstep and collect your laundry.</p>
+        <p>3. We clean and fold: Your laundry will be expertly cleaned, folded, and packaged with care.</p>
+        <p>4. Delivery: We'll deliver your fresh and neatly folded laundry back to your specified location.</p>
+        <p>Enjoy the convenience of our pickup and delivery services and let us take care of your laundry!</p>
+    </div>
+</body>
+</html>
